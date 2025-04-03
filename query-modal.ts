@@ -51,7 +51,7 @@ export class QueryModal extends Modal {
   }
 
   private async callApi(query: string): Promise<string[]> {
-    const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${this.settings.searchEngineId}&searchType=image&num=10&key=${this.settings.apiKey}`;
+    const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${this.settings.searchEngineId}&searchType=image&num=30&key=${this.settings.apiKey}`;
     const response = await requestUrl(url);
 
     if (response.status < 200 || response.status >= 300) {
